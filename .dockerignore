@@ -1,0 +1,5 @@
+fly.toml
+venv
+.git
+minimal/
+# ... whatever else you want

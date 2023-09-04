@@ -7,7 +7,17 @@ CREDIT:
 import os
 from flask import Flask
 from flask_login import login_user, LoginManager, UserMixin, current_user
-from dash import dcc, html, Input, Output, State, no_update, page_container, Dash, callback
+from dash import (
+    dcc,
+    html,
+    Input,
+    Output,
+    State,
+    no_update,
+    page_container,
+    Dash,
+    callback,
+)
 from auth import protect_layouts
 
 # Exposing the Flask Server to enable configuring it for logging in
@@ -97,7 +107,7 @@ def login_button_click(n_clicks, username, password):
             return "Invalid username", no_update
         if VALID_USERNAME_PASSWORD.get(username) == password:
             login_user(User(username))
-            return no_update, dcc.Location(id='redirect-login-to-home',pathname='/')
+            return no_update, dcc.Location(id="redirect-login-to-home", pathname="/")
         return "Incorrect  password", no_update
     return no_update, no_update
 

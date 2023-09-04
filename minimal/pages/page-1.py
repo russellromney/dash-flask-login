@@ -4,6 +4,7 @@ from auth import protected
 
 register_page(__name__)
 
+
 @protected
 def layout():
     return html.Div(
