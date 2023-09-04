@@ -1,9 +1,9 @@
 from dash import html, dcc, Output, Input, callback, register_page
+
 from auth import protected
 
 register_page(__name__)
 
-# this is always protected, no matter the global default.
 @protected
 def layout():
     return html.Div(

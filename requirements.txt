@@ -1,4 +1,4 @@
-dash==2.5.1
+dash==2.13.0
 ldap3
 flask-login
 python-dotenv
